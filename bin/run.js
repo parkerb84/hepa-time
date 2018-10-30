@@ -18,7 +18,6 @@ server.on('listening', function() {
                 console.log("Error in connecting to Hepa");
                 return;
             }
-            console.log(res.body);
         });
     };
 
