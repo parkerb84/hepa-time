@@ -1,0 +1,24 @@
+{
+  "name": "hepa-time",
+  "version": "1.0.0",
+  "description": "Hepa Time Microservice",
+  "main": "server/service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bfp",
+    "bot",
+    "slack",
+    "hd",
+    "pmn",
+    "hepa",
+    "microservice"
+  ],
+  "author": "Benjamin Parker",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "dotenv": "^6.1.0"
+  }
+}
