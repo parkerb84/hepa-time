@@ -18,7 +18,8 @@
   "author": "Benjamin Parker",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^6.1.0",
     "express": "^4.14.0",
-    "dotenv": "^6.1.0"
+    "superagent": "^4.0.0-beta.5"
   }
 }
