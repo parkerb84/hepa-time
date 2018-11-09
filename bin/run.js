@@ -1,6 +1,5 @@
 'use strict';
 
-require('dotenv').config();
 const request = require('superagent');
 const service = require('../server/service');
 const http = require('http');
