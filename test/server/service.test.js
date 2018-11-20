@@ -14,15 +14,24 @@ describe('The express service', () => {
     });
   });
   describe('GET /service/:location', () => {
-    it('should return HTTP 200 and a reply wiht a valid result', (done) => {
+    it('should return HTTP 200 and a reply with a valid result', (done) => {
       request(service)
         .get('/service/philadelphia')
+        .set('X-HEPA-SERVICE-TOKEN', config.serviceAccessToken)
         .expect(200)
         .end((err, res) => {
           if(err) return done(err);
           res.body.result.should.exist;
           return done();
         });
+    });
+
+    it('should return HTTP 403 if no valid token was passed', (done) => {
+      request(service)
+        .get('/service/philadelphia')
+        .set('X-HEPA-SERVICE-TOKEN', 'wrongToken')
+        .expect(403)
+        .end(done);
     });
   });
 });
